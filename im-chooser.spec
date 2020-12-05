@@ -13,7 +13,7 @@ License:	GPLv2+ and LGPLv2+
 URL:		http://pagure.io/im-chooser/
 %{?_with_gtk2:BuildRequires:	gtk2-devel}
 %{!?_with_gtk2:BuildRequires:	gtk3-devel}
-BuildRequires:	libSM-devel imsettings-devel >= 1.3.0
+#BuildRequires:	libSM-devel imsettings-devel >= 1.3.0
 %if 0%{?_with_xfce}
 BuildRequires:	libxfce4util-devel
 %endif
