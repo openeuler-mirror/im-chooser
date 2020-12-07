@@ -13,9 +13,9 @@ License:	GPLv2+ and LGPLv2+
 URL:		http://pagure.io/im-chooser/
 %{?_with_gtk2:BuildRequires:	gtk2-devel}
 %{!?_with_gtk2:BuildRequires:	gtk3-devel}
-#BuildRequires:	libSM-devel imsettings-devel >= 1.3.0
+BuildRequires:	libSM-devel imsettings-devel >= 1.3.0
 %if 0%{?_with_xfce}
-#BuildRequires:	libxfce4util-devel
+BuildRequires:	libxfce4util-devel
 %endif
 BuildRequires:	desktop-file-utils intltool gettext
 BuildRequires:	gcc
@@ -33,7 +33,7 @@ to be used or disable Input Method usage on the desktop.
 
 %package	common
 Summary:	Common files for im-chooser subpackages
-#Requires:	imsettings >= 1.3.0
+Requires:	imsettings >= 1.3.0
 Obsoletes:	im-chooser < 1.5.0.1
 ## https://fedorahosted.org/fpc/ticket/174
 Provides:	bundled(egglib)
