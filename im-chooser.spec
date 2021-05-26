@@ -19,6 +19,7 @@ BuildRequires:	libxfce4util-devel
 %endif
 BuildRequires:	desktop-file-utils intltool gettext
 BuildRequires:	gcc
+BuildRequires:	libxfce4util-devel
 
 Source0:	http://releases.pagure.org/%{name}/%{name}-%{version}.tar.bz2
 
