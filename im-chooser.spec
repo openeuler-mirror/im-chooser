@@ -8,7 +8,7 @@
 
 Name:		im-chooser
 Version:	1.7.1
-Release:	7%{?dist}
+Release:	8%{?dist}
 License:	GPLv2+ and LGPLv2+
 URL:		http://pagure.io/im-chooser/
 %{?_with_gtk2:BuildRequires:	gtk2-devel}
@@ -116,10 +116,12 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/applications/im-chooser-panel.desktop
 %files	xfce
 %{_bindir}/xfce4-im-chooser
 %{_datadir}/applications/xfce4-im-chooser.desktop
-/usr/lib/debug/usr/bin/xfce4-im-chooser-1.7.1-7.isoft.aarch64.debug
+#/usr/lib/debug/usr/bin/xfce4-im-chooser-1.7.1-7.isoft.aarch64.debug
 %endif
 
 %changelog
+* Mon May 26 2021 isoft <isoft@isoft-linux.com> - 1.7.1-7
+- Rebuilt for iSoft
 * Fri Feb 01 2019 isoft <isoft@isoft-linux.com> - 1.7.1-7
 - Rebuilt for iSoft
 
