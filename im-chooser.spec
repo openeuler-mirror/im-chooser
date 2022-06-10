@@ -8,7 +8,7 @@
 
 Name:		im-chooser
 Version:	1.7.1
-Release:	8%{?dist}
+Release:	9
 License:	GPLv2+ and LGPLv2+
 URL:		http://pagure.io/im-chooser/
 %{?_with_gtk2:BuildRequires:	gtk2-devel}
@@ -120,6 +120,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/applications/im-chooser-panel.desktop
 %endif
 
 %changelog
+* Fri Jun 10 2022 fuyahong <fuyahong@uniontech.com> - 1.7.1-9
+- delete %dist.
+
 * Mon May 26 2021 isoft <isoft@isoft-linux.com> - 1.7.1-7
 - Rebuilt for iSoft
 * Fri Feb 01 2019 isoft <isoft@isoft-linux.com> - 1.7.1-7
