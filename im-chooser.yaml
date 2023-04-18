@@ -1,0 +1,4 @@
+version_control: github
+src_repo: mate-desktop/im-chooser
+tag_prefix: "^v"
+separator: "."
