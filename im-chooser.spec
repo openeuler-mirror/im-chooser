@@ -8,7 +8,7 @@
 
 Name:		im-chooser
 Version:	1.7.1
-Release:	9
+Release:	10
 License:	GPLv2+ and LGPLv2+
 URL:		http://pagure.io/im-chooser/
 %{?_with_gtk2:BuildRequires:	gtk2-devel}
@@ -64,6 +64,10 @@ This package contains the XFCE settings panel for im-chooser.
 %autosetup
 
 %build
+%if "%toolchain" == "clang"
+	export CFLAGS="$CFLAGS -Wno-error=format-nonliteral"
+	export CXXFLAGS="$CXXFLAGS -Wno-error=format-nonliteral"
+%endif
 %configure
 make %{?_smp_mflags}
 
@@ -120,6 +124,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/applications/im-chooser-panel.desktop
 %endif
 
 %changelog
+* Tue Jun 20 2023 yoo <sunyuechi@iscas.ac.cn> - 1.7.1-10
+- fix clang build error
+
 * Mon Dec 13 2021 zhangshaoning <zhangshaoning@uniontech.com> - 1.7.1-9
 - delete %dist.
 
